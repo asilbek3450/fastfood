@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+
+{% block content %}
+        <div class="hero_area">
+            <div class="bg-box">
+                <img src="/static/images/hero-bg.jpg" alt="" />
+            </div>
+
+            <!-- slider section -->
+            <section class="slider_section">
+                <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-6">
+                                        <div class="detail-box">
+                                            <h1>
+                                                Fast Food Restaurant
+                                            </h1>
+                                            <p>
+                                                Oʻzbekiston Respublikasi boʻylab 71 ta filial. Qaysi EVOS restorani uyingiz yoki ofisingizga yaqin? Bu yerda har bir filialning joylashuvi
+                                            </p>
+                                            <div class="btn-box">
+                                                <a href="" class="btn1">
+                                                    Buyurtma berish
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-6">
+                                        <div class="detail-box">
+                                            <h1>
+                                                Fast Food Restaurant
+                                            </h1>
+                                            <p>
+                                                Bizning mazzali taomlarimiz siri nimada? Hammasi juda oddiy. Biz sizga o’z yaqinlarimizga tayyorlagan kabi g'amxo'rlik va iliqlik bilan tayyorlanamiz!
+
+                                            </p>
+                                            <div class="btn-box">
+                                                <a href="" class="btn1">
+                                                    Buyurtma berish
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-7 col-lg-6">
+                                        <div class="detail-box">
+                                            <h1>
+                                                Fast Food Restaurant
+                                            </h1>
+                                            <p>
+                                                Ishonchimiz komil-ki, restoranning har bir tashrifchisi menyudan har qanday lazzat uchun o'zining sevimli taomlarini topadi va bizdan och qaytmaydi!
+
+
+                                            </p>
+                                            <div class="btn-box">
+                                                <a href="" class="btn1">
+                                                    Buyurtma berish
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <ol class="carousel-indicators">
+                            <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
+                            <li data-target="#customCarousel1" data-slide-to="1"></li>
+                            <li data-target="#customCarousel1" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+            <!-- end slider section -->
+
+        </div>
+
+
+        <!-- food section -->
+    {% include 'menu.html' %}
+        <!-- end food section -->
+
+        <!-- about section -->
+
+    {% include 'about.html' %}
+
+        <!-- end about section -->
+
+        <!-- book section -->
+    {% include 'book.html' %}
+        <!-- end book section -->
+
+        <!-- client section -->
+
+        <section class="client_section layout_padding-bottom">
+            <div class="container">
+                <div class="heading_container heading_center psudo_white_primary mb_45">
+                    <h2>
+                        Mijozlarimiz fikrlari
+                    </h2>
+                </div>
+                <div class="carousel-wrap row">
+                    <div class="owl-carousel client_owl-carousel">
+                        <div class="item">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        Men har doim faqat Evosga buyurtma beraman, bizga juda yoqadi! Ular har doim salfetkalarni, ho'l va quruq, tish pichog'ini tejamaydilar, hamma narsa kompaniya logotipi bilan qadoqlangan, toza va ozoda, haqiqiy estetik zavq! Katta rahmat
+                                    </p>
+                                    <h6>
+                                        Xudayberganova Madina
+                                    </h6>
+                                </div>
+                                <div class="img-box">
+                                    <img src="/static/images/client1.jpg" alt="" class="box-img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="box">
+                                <div class="detail-box">
+                                    <p>
+                                        Хочу поблагодарить Evos. За их труд. За их не безразличие к сотрудникам скорой помощи. Спасибо вам за ваше внимание и заботу о нас. Спасибо Евос за ваши лаваши, быстрая доставка, вежливые операторы. Советую!!
+                                    </p>
+                                    <h6>
+                                        Валерий Маслов
+                                    </h6>
+                                </div>
+                                <div class="img-box">
+                                    <img src="/static/images/client2.jpg" alt="" class="box-img" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- end client section -->
+
+{% endblock content %}
