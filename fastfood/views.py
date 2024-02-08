@@ -1,31 +1,25 @@
-from django.shortcuts import render
-from .models import Product, ProductCategory
+from django.shortcuts import render, redirect
+
+from .forms import BookTableForm
+from .models import Product, ProductCategory, BookTable
 
 
 # Create your views here.
 def homepage(request):
+    if request.method == 'POST':
+        form = BookTableForm(request.POST)
+        if form.is_valid():
+            form.save()
+        else:
+            print('Form is not valid')
+    else:
+        form = BookTableForm(request.POST)
+
     products = Product.objects.all().order_by('price')
     categories = ProductCategory.objects.all()
     context = {
+        'form': form,
         'products': products,
         'categories': categories,
     }
     return render(request, 'index.html', context)
-
-
-def menu(request):
-    products = Product.objects.all().order_by('price')
-    categories = ProductCategory.objects.all()
-    context = {
-        'products': products,
-        'categories': categories,
-    }
-    return render(request, 'menu.html', context)
-
-
-def book(request):
-    return render(request, 'book.html')
-
-
-def about(request):
-    return render(request, 'about.html')
