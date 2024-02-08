@@ -68,3 +68,27 @@ $(".client_owl-carousel").owlCarousel({
         }
     }
 });
+
+// Optional JavaScript for smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// JavaScript for adding 'active' class to clicked navbar items
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function() {
+        // Remove 'active' class from all navbar items
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        // Add 'active' class to the clicked navbar item
+        this.classList.add('active');
+    });
+});
+

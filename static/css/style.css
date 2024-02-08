@@ -141,6 +141,9 @@ a:focus {
 .header_section {
   padding: 15px 0;
   background-color: black;
+  position: fixed; /* Fixed position to keep it visible */
+  width: 100%;
+  z-index: 1000; /* Ensure it stays on top of other content */
 }
 
 .header_section .container-fluid {
