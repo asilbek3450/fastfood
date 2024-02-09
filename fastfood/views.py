@@ -10,10 +10,11 @@ def homepage(request):
         form = BookTableForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('homepage')
         else:
             print('Form is not valid')
     else:
-        form = BookTableForm(request.POST)
+        form = BookTableForm()
 
     products = Product.objects.all().order_by('price')
     categories = ProductCategory.objects.all()

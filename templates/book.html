@@ -33,6 +33,17 @@
 {#                                <div>#}
 {#                                    {{ form.message }}#}
 {#                                </div>#}
+                                
+                                {% if form.errors %}
+                                    <div class="alert alert-danger" role="alert">
+                                        <ul>
+                                            {% for error in form.errors %}
+                                                <li>{{ error|escape }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                                
                                 <div class="btn_box">
                                     <button type="submit">
                                         Buyurtma qilish

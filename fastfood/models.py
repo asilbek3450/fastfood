@@ -1,4 +1,10 @@
 from django.db import models
+from django.core.validators import RegexValidator
+
+regex_phone = RegexValidator(
+    regex=r'^\+?998?\d{9,15}$',
+    message="Telefon raqamingizni to'g'ri kiriting. Masalan: +998901234567 yoki 901234567"
+)
 
 
 # Create your models here.
@@ -34,7 +40,7 @@ class Product(models.Model):
 
 class BookTable(models.Model):
     name = models.CharField(max_length=255)
-    phone = models.CharField(max_length=50)
+    phone = models.CharField(max_length=50, validators=[regex_phone])
     email = models.EmailField(null=True, blank=True)
     number_of_people = models.IntegerField()
     date = models.DateField()
