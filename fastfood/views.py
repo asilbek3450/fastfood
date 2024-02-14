@@ -24,3 +24,7 @@ def homepage(request):
         'categories': categories,
     }
     return render(request, 'index.html', context)
+
+
+def testfunction(request):
+    return render(request, 'test.html')
