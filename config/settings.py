@@ -102,7 +102,8 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_RECIPIENT_LIST = 'asilbekmirolimov@gmail.com'  # recipient's email-id
 EMAIL_HOST_USER = 'asilbek3450@gmail.com'  # sender's email-id
-EMAIL_HOST_PASSWORD = 'tort wtfl omzq qkbn'  # https://myaccount.google.com/apppasswords/ generate password
+EMAIL_HOST_PASSWORD = 'plpk kdms nurc hrvb'  # https://myaccount.google.com/apppasswords/ generate password
+# ANOTHER LINK: https://myaccount.google.com/apppasswords?rapt=AEjHL4NH1NhS702HH2wg1kFXXZB77FN76SXwgRSEOhvonG4Up4cVOkqmvjFhpoBInpHTLE5Ph7t7ple9me-7S3IcF2gN95bHMC4VzbKqHiAi1yQa1cO6MU0
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
